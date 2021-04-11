@@ -35,9 +35,11 @@ tbody {
 }
 
 #text-area {
-  width: 90%;
-  height: 60%;
+  width: 800px;
   padding: 0;
+  position: absolute;
+  height: 50px;
+  border: none;
 }
 
 .time-block {
