@@ -3,6 +3,7 @@ let currentHour = parseInt(moment().format("H"));
 let todoForm = document.querySelector(".todo-form");
 var btn = document.querySelectorAll(".saveBtn");
 
+console.log(currentHour);
 // text array
 textArr = [];
 
@@ -31,20 +32,15 @@ Array.from(descriptions).forEach((description) => {
     descriptionHour;
   if (descriptionIdString) {
     descriptionHour = parseInt(descriptionIdString);
+    console.log(descriptionHour);
   }
   if (descriptionHour) {
     // Compares row id to current hour and sets color accordingly
     if (currentHour === descriptionHour) {
       setColor(description, "red");
-    } else if (
-      currentHour < descriptionHour &&
-      currentHour > descriptionHour - 12
-    ) {
+    } else if (currentHour < descriptionHour) {
       setColor(description, "green");
-    } else if (
-      currentHour > descriptionHour &&
-      currentHour < descriptionHour + 12
-    ) {
+    } else if (currentHour > descriptionHour) {
       setColor(description, "lightgrey");
     } else {
       setColor(description, "white");
