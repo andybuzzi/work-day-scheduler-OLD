@@ -29,17 +29,23 @@ tbody {
   flex-basis: 100%;
 }
 .description {
+  display: flex;
   white-space: pre-wrap;
   border: #000000 solid 2px;
   flex-basis: 80%;
 }
 
+.todo-form {
+  display: flex;
+}
 #text-area {
-  width: 800px;
-  padding: 0;
-  position: absolute;
-  height: 50px;
+  display: flex;
+  background: transparent;
+  width: 900px;
+  padding: 0 15px;
+  height: 75px;
   border: none;
+  outline: none;
 }
 
 .time-block {
